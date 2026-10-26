@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b0d"><title>Barbearia Grau e Corte</title>
+<style>
+:root{--bg:#09090b;--card:#151517;--card2:#202023;--text:#f7f7f8;--muted:#a4a4aa;--line:#2a2a2e;--red:#e1262f;--red2:#a81720;--field:#101012}
+[data-theme=light]{--bg:#f4f4f5;--card:#fff;--card2:#f0f0f2;--text:#18181b;--muted:#66666f;--line:#dedee3;--red:#d91f2a;--red2:#a81720;--field:#fafafa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1100px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:76px}.brand{display:flex;align-items:center;gap:12px}.mark{border:2px solid var(--red);color:var(--red);border-radius:50%;width:46px;height:46px;display:grid;place-items:center;font-weight:1000}.brand b{display:block;font-weight:1000;letter-spacing:.04em}.brand small{color:var(--muted);letter-spacing:.12em;font-size:10px}.actions{display:flex;gap:8px;align-items:center}.btn{border:0;background:var(--red);color:white;border-radius:12px;padding:13px 17px;font-weight:850;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;gap:8px}.btn:hover{background:var(--red2)}.btn.alt{background:var(--card2);color:var(--text);border:1px solid var(--line)}.btn:disabled{opacity:.5;cursor:not-allowed}.icon{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}.hero{padding:42px 0 25px}.heroBox{padding:clamp(30px,7vw,75px) 20px;text-align:center;border:1px solid var(--line);border-radius:28px;background:radial-gradient(ellipse at top,#e1262f22,transparent 60%),var(--card);position:relative;overflow:hidden}.tag{display:inline-block;color:var(--red);background:#e1262f18;border:1px solid #e1262f66;border-radius:30px;padding:6px 13px;font-size:12px;font-weight:900;letter-spacing:.12em}h1{font-size:clamp(34px,7vw,66px);line-height:1.02;letter-spacing:-.04em;margin:20px 0}h1 span,.price{color:var(--red)}.hero p{color:var(--muted);max-width:650px;margin:auto}.hero .btn{margin:23px 5px 0}.section{padding:27px 0}.heading{font-size:clamp(23px,4vw,32px);margin:0 0 20px;display:flex;gap:13px;align-items:center;font-weight:950}.heading:before{content:"";height:42px;width:6px;border-radius:6px;background:var(--red)}.muted{color:var(--muted)}.services{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.service,.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}.service.active{border-color:var(--red);box-shadow:0 0 0 1px var(--red)}.serviceTop{display:flex;justify-content:space-between;gap:12px}.service h3{margin:0;font-size:19px}.price{font-size:23px;font-weight:1000;white-space:nowrap}.duration{color:var(--muted);margin:12px 0 17px;font-size:14px}.service .btn{width:100%}.layout{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start}.panel h3{margin:0 0 6px;font-size:22px}.form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:13px;font-weight:800}input,select{width:100%;background:var(--field);border:1px solid var(--line);border-radius:11px;padding:13px;color:var(--text);min-height:48px}input:focus,select:focus{outline:2px solid #e1262f66;border-color:var(--red)}.fullBtn{width:100%;margin-top:17px}.row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}.row strong{text-align:right}.row.deposit{color:var(--red);font-weight:950;font-size:18px;border:0}.pix{background:var(--card2);border:1px dashed #e1262f88;border-radius:15px;padding:16px;margin-top:16px}.pixkey{font-size:24px;font-weight:950;overflow-wrap:anywhere}.small{font-size:12px;color:var(--muted)}.notice{padding:12px;border-radius:12px;background:#e1262f12;color:var(--muted);font-size:13px;margin-top:14px}.status{padding:12px;border-radius:12px;margin-top:12px;display:none}.status.show{display:block}.status.ok{background:#16803d22;color:#42c878}.status.err{background:#e1262f18;color:var(--red)}.address{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--card);margin:20px 0 45px}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px}.hidden{display:none!important}
+@media(max-width:720px){.services,.layout{grid-template-columns:1fr}.hero{padding-top:24px}.address{align-items:flex-start;flex-direction:column}}@media(max-width:430px){.wrap{width:calc(100% - 22px)}.form{grid-template-columns:1fr}.field.full{grid-column:auto}.brand small{font-size:8px}.brand b{font-size:14px}.mark{width:40px;height:40px}.nav .btn{padding:11px 12px;font-size:12px}.service{padding:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#"><div class="mark">G&C</div><div><b>GRAU E CORTE</b><small>BARBEARIA &amp; HEADSHOP</small></div></a>
+<div class="actions"><button class="icon" id="theme" aria-label="Alternar tema">☼</button><a class="btn" href="#agendar">AGENDAR ↗</a></div>
+</div></header>
+<main>
+<section class="wrap hero"><div class="heroBox"><span class="tag">ESTILO &amp; ATITUDE</span><h1>O CORTE PERFEITO<br>NA <span>QUEBRADA.</span></h1><p>Profissionais especializados, ambiente irado e o melhor trato no visual. Escolha seu serviço e reserve seu horário.</p><a class="btn" href="#servicos">ESCOLHER MEU CORTE</a><a class="btn alt" href="#endereco">COMO CHEGAR</a></div></section>
+<section class="wrap section" id="servicos"><h2 class="heading">NOSSOS SERVIÇOS &amp; PREÇOS</h2><div class="services" id="services"></div></section>
+<section class="wrap section" id="agendar"><h2 class="heading">AGENDE SEU HORÁRIO</h2><p class="muted">Escolha data e horário disponíveis. O sistema consulta os agendamentos confirmados e pendentes.</p>
+<div class="layout"><div class="panel"><h3>Seus dados</h3><p class="muted">Preencha para reservar seu horário.</p>
+<form id="bookingForm"><div class="form">
+<div class="field full"><label for="name">Nome completo *</label><input id="name" required maxlength="90" autocomplete="name" placeholder="Seu nome"></div>
+<div class="field full"><label for="phone">Telefone / WhatsApp *</label><input id="phone" required maxlength="25" autocomplete="tel" placeholder="(11) 99999-9999"></div>
+<div class="field full"><label for="service">Serviço desejado *</label><select id="service" required></select></div>
+<div class="field"><label for="date">Data *</label><input id="date" type="date" required></div>
+<div class="field"><label for="time">Horário disponível *</label><select id="time" required><option value="">Selecione uma data</option></select></div>
+<div class="field full"><label for="email">E-mail para o Pix (opcional)</label><input id="email" type="email" autocomplete="email" placeholder="voce@email.com"></div>
+</div><button class="btn fullBtn" id="submit" type="submit">RESERVAR E GERAR PIX ↗</button><div id="formStatus" class="status"></div></form>
+<p class="small">A reserva fica pendente enquanto aguarda o pagamento. O horário só fica confirmado quando o provedor de pagamento notifica o sistema.</p></div>
+<aside class="panel"><h3>Resumo</h3><p class="muted">Sinal de 50% para reservar.</p><div class="row"><span>Serviço</span><strong id="sumName">Corte / Corte Simples</strong></div><div class="row"><span>Duração</span><strong id="sumDuration">1h30</strong></div><div class="row"><span>Valor total</span><strong id="sumPrice">R$ 35,00</strong></div><div class="row deposit"><span>Sinal Pix (50%)</span><strong id="sumDeposit">R$ 17,50</strong></div>
+<div id="paymentBox" class="pix hidden"><div class="small">PAGAMENTO PIX</div><div id="pixAmount" class="pixkey"></div><div id="pixQr"></div><label for="pixCode">Pix copia e cola</label><textarea id="pixCode" rows="4" style="width:100%;margin-top:6px;background:var(--field);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px" readonly></textarea><button id="copyPix" class="btn alt fullBtn" type="button">COPIAR PIX</button><p id="paymentStatus" class="small"></p></div>
+<div class="notice">A chave informada pelo estabelecimento é <b>1194820-7983</b>. Para confirmação automática do pagamento, é necessário configurar um provedor Pix (Mercado Pago neste projeto). A chave Pix manual não permite que o site detecte sozinho um pagamento.</div>
+<a id="whatsapp" class="btn fullBtn" target="_blank" rel="noopener" href="https://wa.me/5511948207983">FALAR COM O BARBEIRO ↗</a>
+</aside></div></section>
+<section class="wrap" id="endereco"><div class="address"><div><b>📍 BARBEARIA GRAU E CORTE</b><div class="muted">Travessa Bernadino de Campos, 17</div></div><a class="btn alt" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Travessa+Bernadino+de+Campos+17">VER NO MAPA ↗</a></div></section>
+</main><footer><div class="wrap">© <span id="year"></span> Barbearia Grau e Corte · Seu estilo, seu grau.</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/*
+  CONFIGURE antes de publicar: cole URL e anon key do projeto Supabase em CONFIG.
+  O site continua mostrando os serviços sem configuração, mas reservas exigem Supabase.
+*/
+const CONFIG={SUPABASE_URL:"COLE_A_URL_DO_SUPABASE",SUPABASE_ANON_KEY:"COLE_A_CHAVE_ANON_DO_SUPABASE",WHATSAPP:"5511948207983"};
+const SERVICES=[
+{id:"simples",name:"Corte / Corte Simples",price:35,duration:90,label:"1 hora e 30 minutos"},
+{id:"navalhado",name:"Corte Navalhado",price:40,duration:90,label:"1 hora e 30 minutos"},
+{id:"barba",name:"Corte + Barba",price:60,duration:120,label:"2 horas"},
+{id:"penteado",name:"Corte + Penteado",price:60,duration:120,label:"2 horas"}
+];
+const $=id=>document.getElementById(id),money=n=>n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const configured=CONFIG.SUPABASE_URL.startsWith("https://")&&!CONFIG.SUPABASE_URL.includes("COLE_A")&&CONFIG.SUPABASE_ANON_KEY&&!CONFIG.SUPABASE_ANON_KEY.includes("COLE_A");
+const db=configured?supabase.createClient(CONFIG.SUPABASE_URL,CONFIG.SUPABASE_ANON_KEY):null;
+let selected="simples",bookingId=null,pollTimer=null;
+function renderServices(){$("services").innerHTML=SERVICES.map(s=>`<article class="service ${s.id===selected?"active":""}"><div class="serviceTop"><h3>${s.name}</h3><span class="price">${money(s.price)}</span></div><div class="duration">◷ Duração: ${s.label}</div><button class="btn ${s.id===selected?"":"alt"}" data-pick="${s.id}">${s.id===selected?"✓ SELECIONADO":"SELECIONAR PARA AGENDAR"}</button></article>`).join("");$("service").innerHTML=SERVICES.map(s=>`<option value="${s.id}">${s.name} — ${money(s.price)}</option>`).join("");$("service").value=selected}
+function updateSummary(){const s=SERVICES.find(x=>x.id===$("service").value)||SERVICES[0];selected=s.id;$("sumName").textContent=s.name;$("sumDuration").textContent=s.duration===90?"1h30":"2h";$("sumPrice").textContent=money(s.price);$("sumDeposit").textContent=money(s.price/2);renderServices()}
+function status(msg,type="err"){const el=$("formStatus");el.textContent=msg;el.className="status show "+(type==="ok"?"ok":"err")}
+function dateLocal(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`}
+async function loadTimes(){const date=$("date").value,s=SERVICES.find(x=>x.id===$("service").value);$("time").innerHTML="";if(!date){$("time").innerHTML='<option value="">Selecione uma data</option>';return}if(!db){$("time").innerHTML='<option value="">Configure o Supabase primeiro</option>';return}
+$("time").innerHTML='<option>Consultando disponibilidade…</option>';
+const {data,error}=await db.rpc("available_slots",{p_date:date,p_duration_minutes:s.duration});
+if(error){$("time").innerHTML='<option value="">Erro ao consultar horários</option>';status("Não foi possível carregar os horários. Verifique a configuração do Supabase.");return}
+const slots=data||[];$("time").innerHTML=slots.length?slots.map(t=>`<option value="${t}">${t.slice(0,5)}</option>`).join(""):'<option value="">Sem horários disponíveis nesta data</option>'}
+function waLink(message){return `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(message)}`}
+$("services").addEventListener("click",e=>{const b=e.target.closest("[data-pick]");if(!b)return;selected=b.dataset.pick;$("service").value=selected;updateSummary();$("agendar").scrollIntoView({behavior:"smooth"})});
+$("service").addEventListener("change",()=>{updateSummary();loadTimes()});$("date").addEventListener("change",loadTimes);
+$("theme").onclick=()=>{const light=document.documentElement.dataset.theme!=="light";document.documentElement.dataset.theme=light?"light":"dark";$("theme").textContent=light?"☾":"☼";localStorage.setItem("gc-theme",light?"light":"dark")};
+if(localStorage.getItem("gc-theme")){document.documentElement.dataset.theme=localStorage.getItem("gc-theme");$("theme").textContent=localStorage.getItem("gc-theme")==="light"?"☾":"☼"}
+$("date").min=dateLocal(new Date());$("year").textContent=new Date().getFullYear();
+$("bookingForm").addEventListener("submit",async e=>{e.preventDefault();if(!db){status("Para ativar agendamentos reais, configure a URL e a chave anon do Supabase no início do arquivo index.html e execute supabase/schema.sql.");return}
+const s=SERVICES.find(x=>x.id===$("service").value),date=$("date").value,time=$("time").value;
+if(!time){status("Escolha um horário disponível.");return}
+$("submit").disabled=true;$("submit").textContent="CRIANDO RESERVA…";
+try{
+const payload={p_customer_name:$("name").value.trim(),p_customer_phone:$("phone").value.trim(),p_customer_email:$("email").value.trim()||null,p_service_id:s.id,p_booking_date:date,p_start_time:time};
+const {data:bid,error}=await db.rpc("create_booking",payload);if(error)throw error;bookingId=bid;
+const {data:payment,error:payError}=await db.functions.invoke("create-pix-payment",{body:{booking_id:bid}});
+if(payError)throw payError;
+$("paymentBox").classList.remove("hidden");$("pixAmount").textContent=money(s.price/2);$("pixCode").value=payment.pix_copy_paste||"";
+$("pixQr").innerHTML=payment.qr_code_base64?`<img alt="QR Code Pix" style="width:190px;max-width:100%;display:block;margin:12px auto" src="data:image/png;base64,${payment.qr_code_base64}">`:"";
+$("paymentStatus").textContent="Aguardando pagamento Pix. Após pagar, o status será atualizado pelo sistema.";
+const message=`Olá! Solicitei um agendamento na Barbearia Grau e Corte.%0A%0ANome: ${encodeURIComponent($("name").value)}%0ATelefone: ${encodeURIComponent($("phone").value)}%0AServiço: ${encodeURIComponent(s.name)}%0AData: ${encodeURIComponent(new Date(date+"T12:00:00").toLocaleDateString("pt-BR"))}%0AHorário: ${encodeURIComponent(time.slice(0,5))}%0ADuração: ${encodeURIComponent(s.label)}%0AValor total: ${encodeURIComponent(money(s.price))}%0ASinal Pix (50%): ${encodeURIComponent(money(s.price/2))}%0AEndereço: ${encodeURIComponent("Travessa Bernadino de Campos, 17")}%0A%0APor favor, confirme meu agendamento.`;
+$("whatsapp").href=`https://wa.me/${CONFIG.WHATSAPP}?text=${message}`;
+status("Reserva criada! Faça o Pix gerado acima. O horário fica confirmado após a confirmação do pagamento.", "ok");
+if(pollTimer)clearInterval(pollTimer);pollTimer=setInterval(checkStatus,7000);
+$("paymentBox").scrollIntoView({behavior:"smooth",block:"center"});
+}catch(err){status(err.message||"Não foi possível criar a reserva. Tente novamente ou fale com o barbeiro.");}
+finally{$("submit").disabled=false;$("submit").textContent="RESERVAR E GERAR PIX ↗"}
+});
+async function checkStatus(){if(!db||!bookingId)return;const {data,error}=await db.from("bookings").select("status").eq("id",bookingId).maybeSingle();if(error||!data)return;if(data.status==="confirmed"){$("paymentStatus").textContent="Pagamento confirmado! Seu horário está confirmado.";status("Pagamento confirmado e agendamento confirmado!","ok");clearInterval(pollTimer)}else if(data.status==="expired"||data.status==="cancelled"){$("paymentStatus").textContent="Esta reserva expirou ou foi cancelada.";clearInterval(pollTimer)}}
+$("copyPix").onclick=async()=>{try{await navigator.clipboard.writeText($("pixCode").value);$("paymentStatus").textContent="Pix copia e cola copiado."}catch(e){$("pixCode").select();document.execCommand("copy");$("paymentStatus").textContent="Pix copiado."}};
+renderServices();updateSummary();
+</script></body></html>
